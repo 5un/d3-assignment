@@ -2,13 +2,56 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
     <script src="http://d3js.org/d3.v4.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="app.js"></script>
 </head>
 <body>
-    <svg></svg>
-    <p id="status">Year: 2012</p>
-    <button id="nextButton">Next</button>
+  <div class="page-container">
+    <h1 class="center">Is it harder to get into Cal these days?</h1>
+    <div class="center">
+    <small>( Scroll to move through years )</small>
+    </div>
+    <div class="row">
+      <div class="col col-50 col-chart">
+        <svg></svg>
+        <ul>
+          <li style="color: #F0A924">= University of California, Berkeley</li>
+          <li style="color: #234986">= Other UC</li>
+          <li style="color: rgba(255,255,255,0.3)">= Other Top Universities</li>
+        </ul>
+      </div>
+      <div class="col col-50">
+        <h2>Top schools keep getting harder to get in,<br /> so as Cal.</h2>
+        <p>
+          Data from <a href="https://collegescorecard.ed.gov/">College Scorecard</a> suggests that the average SAT scores continuosly increased while the admission rate kept getting lower during 2003 - 2015.
+        </p>
+        <p>
+          While those metrics did not dramatically change for the elite schools, the universities in UC system moves closer towards the elites and keep getting as hard to get in as those schools.
+        </p>
+      </div>
+      
+    </div>
+    <div id="year-container">
+      <h2>Year</h2>
+      <div class="year year-active">2003</div>
+      <div class="year">2004</div>
+      <div class="year">2005</div>
+      <div class="year">2006</div>
+      <div class="year">2007</div>
+      <div class="year">2008</div>
+      <div class="year">2009</div>
+      <div class="year">2010</div>
+      <div class="year">2011</div>
+      <div class="year">2012</div>
+      <div class="year">2013</div>
+      <div class="year">2014</div>
+      <div class="year">2015</div>
+      <button id="next-button">Next</button>
+    </div>
+    
+  </div>
 </body>
 </html>

@@ -1,0 +1,107 @@
+/* reset */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #3062B3;
+  color: rgba(255,255,255,0.3);
+  
+}
+
+h1 {
+  color: #F0A924;
+}
+
+h2 {
+  color: rgba(255,255,255,0.75);
+  margin: 0;
+}
+
+a, a:visited {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  
+}
+
+a:hover {
+  color: #F0A924;
+  text-decoration: none
+}
+
+button {
+  background: transparent;
+  appearance: none;
+  color: #F0A924;
+  border: 1px solid #F0A924;
+  border-radius: 4px;
+  padding: 10px;
+
+}
+
+.page-container {
+  padding: 40px;
+}
+
+.row {
+
+}
+
+.col {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.col-50 {
+  width: 49%;
+}
+
+.col-chart {
+  padding-left: 100px;
+}
+
+.center {
+  text-align: center;
+}
+
+#year-container {
+  position: fixed;
+  left: 0;
+  top: 100px;
+  padding: 20px;
+}
+
+.year {
+  padding: 5px 0;
+}
+
+.year-active {
+  color: #F0A924;
+}
+
+/* D3 chart classes */
+
+.axis line{
+  stroke: rgba(255,255,255,0.5);
+}
+
+.axis path{
+  stroke: rgba(255,255,255,0.5);
+}
+
+.axis text{
+  fill: rgba(255,255,255,0.2);
+}  
+
+div.tooltip { 
+  position: absolute;     
+  text-align: center;            
+  pointer-events: none;     
+}

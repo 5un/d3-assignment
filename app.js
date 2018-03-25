@@ -65,8 +65,9 @@ $(function(){
 
     // update data
     dots
-      .transition()  // Transition from old to new
-      .duration(transitionLatency)  // Length of animation
+      .transition()
+      .ease(d3.easeExp)
+      .duration(transitionLatency)
       .attr("r", 5)
       .attr("cx", xMap)
       .attr("cy", yMap)
@@ -79,13 +80,17 @@ $(function(){
     dots
       .on("mouseover", function(d) {
         console.log(d);
+
+        d3.select(this).attr("r", 6)
+
         tooltip.html(d.NAME)
           .style("opacity", 1.0)
-          .style("left", (d3.event.pageX + 5) + "px")
-          .style("top", (d3.event.pageY - 28) + "px")
+          .style("left", (d3.event.pageX + 15) + "px")
+          .style("top", (d3.event.pageY - 10) + "px")
           .style("color", colorByUnivName(d.NAME))
       })
       .on("mouseout", function(d) {
+        d3.select(this).attr("r", 5)
         tooltip
           .style("opacity", 0);
       });
